@@ -11,14 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141111191016) do
+ActiveRecord::Schema.define(version: 20141124094818) do
 
   create_table "bookings", force: true do |t|
     t.string   "user_name"
-    t.integer  "number"
     t.integer  "show_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "seats"
   end
 
   add_index "bookings", ["show_id"], name: "index_bookings_on_show_id"
